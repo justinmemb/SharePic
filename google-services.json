@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "389865300634",
+    "firebase_url": "https://sharepic-2d933.firebaseio.com",
+    "project_id": "sharepic-2d933",
+    "storage_bucket": "sharepic-2d933.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389865300634:android:5349abc082a247d7",
+        "android_client_info": {
+          "package_name": "com.deme.sharepic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389865300634-h1ebph444o6j9oo8rqjkomeqoiejmd3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjK-DbtKBN0bwF_mm5tvOBcajT2IgjN3U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

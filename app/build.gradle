@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "com.deme.sharepic"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    implementation project(':photoedit')
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-alpha2'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:gridlayout-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+//    compile 'com.github.zomato:androidphotofilters:1.0.1'
+//    compile 'ly.img.android:photo-editor-sdk:2.0.13'
+
+    implementation 'com.google.firebase:firebase-appindexing:16.0.1'
+    implementation 'io.requery:sqlite-android:3.15.0'
+    implementation 'com.kaopiz:kprogresshud:1.0.5'
+    implementation 'com.baoyz.actionsheet:library:1.1.7'
+
+    //import firebase sdks
+    implementation 'com.google.firebase:firebase-core:16.0.3'
+    implementation 'com.google.android.gms:play-services-auth:16.0.0'
+    implementation 'com.google.firebase:firebase-auth:16.0.3'
+    implementation 'com.google.firebase:firebase-storage:16.0.2'
+    implementation 'com.google.firebase:firebase-database:16.0.2'
+    implementation 'com.google.firebase:firebase-config:16.0.0'
+    //noinspection GradleDynamicVersion
+    implementation 'com.firebase:firebase-client-android:2.0.3+'
+
+    implementation 'com.facebook.android:facebook-android-sdk:4.36.0'
+
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.10'
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+}
+apply plugin: 'com.google.gms.google-services'
